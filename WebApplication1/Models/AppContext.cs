@@ -6,14 +6,14 @@ namespace WebApplication1.Models
 
     public class AppContext : DbContext
     {
-        // Your context has been configured to use a 'DbContext' connection string from your application's 
+        // Your context has been configured to use a 'AppContext' connection string from your application's 
         // configuration file (App.config or Web.config). By default, this connection string targets the 
-        // 'WebApplication1.Models.DbContext' database on your LocalDb instance. 
+        // 'WebApplication1.Models.AppContext' database on your LocalDb instance. 
         // 
-        // If you wish to target a different database and/or database provider, modify the 'DbContext' 
+        // If you wish to target a different database and/or database provider, modify the 'AppContext' 
         // connection string in the application configuration file.
-        public DbContext()
-            : base("name=DbContext")
+        public AppContext()
+            : base("name=AppContext")
         {
         }
 
