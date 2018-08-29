@@ -1,0 +1,18 @@
+﻿@{
+    ViewBag.Title = "Edit Order";
+}
+<h2>@ViewBag.Title.</h2>
+
+<form method="post">
+    <select name="MenuItem">
+        @foreach (var menuItem in ViewBag.MenuItems)
+        {
+            if (menuItem.Id == ViewBag.Order.MenuItem.Id) {
+                <option selected="selected" value="@menuItem.Id">@menuItem.Name</option>
+            } else {
+                <option value="@menuItem.Id">@menuItem.Name</option>
+            }
+        }
+    </select>
+    <input type="submit" value="Submit" />
+</form>
